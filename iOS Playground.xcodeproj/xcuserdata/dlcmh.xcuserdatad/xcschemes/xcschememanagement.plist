@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MyDrawKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>iOS Playground.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1C0E2A521D79BE0200E96266</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1CE4B83F1D7A83AA007FB9DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
