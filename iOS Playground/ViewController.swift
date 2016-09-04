@@ -9,10 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var boxView: UIView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let frameRect = CGRectMake(20, 50, 120, 200)
+        
+        boxView = UIView(frame: frameRect)
+        boxView?.backgroundColor = UIColor.blueColor()
+        view.addSubview(boxView!)
     }
 
     override func didReceiveMemoryWarning() {
