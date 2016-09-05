@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1C0E2A521D79BE0200E96266"
-               BuildableName = "iOS Playground.app"
-               BlueprintName = "iOS Playground"
-               ReferencedContainer = "container:iOS Playground.xcodeproj">
+               BlueprintIdentifier = "1CCE9AA31D7D5656003B5ABD"
+               BuildableName = "RESTClient.app"
+               BlueprintName = "RESTClient"
+               ReferencedContainer = "container:RESTClient.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1C0E2A521D79BE0200E96266"
-            BuildableName = "iOS Playground.app"
-            BlueprintName = "iOS Playground"
-            ReferencedContainer = "container:iOS Playground.xcodeproj">
+            BlueprintIdentifier = "1CCE9AA31D7D5656003B5ABD"
+            BuildableName = "RESTClient.app"
+            BlueprintName = "RESTClient"
+            ReferencedContainer = "container:RESTClient.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1C0E2A521D79BE0200E96266"
-            BuildableName = "iOS Playground.app"
-            BlueprintName = "iOS Playground"
-            ReferencedContainer = "container:iOS Playground.xcodeproj">
+            BlueprintIdentifier = "1CCE9AA31D7D5656003B5ABD"
+            BuildableName = "RESTClient.app"
+            BlueprintName = "RESTClient"
+            ReferencedContainer = "container:RESTClient.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1C0E2A521D79BE0200E96266"
-            BuildableName = "iOS Playground.app"
-            BlueprintName = "iOS Playground"
-            ReferencedContainer = "container:iOS Playground.xcodeproj">
+            BlueprintIdentifier = "1CCE9AA31D7D5656003B5ABD"
+            BuildableName = "RESTClient.app"
+            BlueprintName = "RESTClient"
+            ReferencedContainer = "container:RESTClient.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
