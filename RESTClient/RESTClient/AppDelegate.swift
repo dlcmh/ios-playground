@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  iOS Playground
+//  RESTClient
 //
-//  Created by David Chin on 02/09/2016.
+//  Created by David Chin on 05/09/2016.
 //  Copyright © 2016 Dakerr Consulting. All rights reserved.
 //
 

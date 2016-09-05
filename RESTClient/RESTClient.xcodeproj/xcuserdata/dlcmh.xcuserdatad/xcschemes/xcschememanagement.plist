@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>iOS Playground.xcscheme</key>
+		<key>RESTClient.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1C0E2A521D79BE0200E96266</key>
+		<key>1CCE9AA31D7D5656003B5ABD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
