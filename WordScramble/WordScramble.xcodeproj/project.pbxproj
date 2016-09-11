@@ -12,6 +12,7 @@
 		1C0593B91D8544060010D3D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C0593B71D8544060010D3D6 /* Main.storyboard */; };
 		1C0593BB1D8544070010D3D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C0593BA1D8544070010D3D6 /* Assets.xcassets */; };
 		1C0593BE1D8544070010D3D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C0593BC1D8544070010D3D6 /* LaunchScreen.storyboard */; };
+		1C0593C61D85484F0010D3D6 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1C0593C51D85484F0010D3D6 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1C0593BA1D8544070010D3D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C0593BD1D8544070010D3D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C0593BF1D8544070010D3D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C0593C51D85484F0010D3D6 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		1C0593B01D8544050010D3D6 /* WordScramble */ = {
 			isa = PBXGroup;
 			children = (
+				1C0593C51D85484F0010D3D6 /* start.txt */,
 				1C0593B11D8544060010D3D6 /* AppDelegate.swift */,
 				1C0593B31D8544060010D3D6 /* MasterViewController.swift */,
 				1C0593B71D8544060010D3D6 /* Main.storyboard */,
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C0593BE1D8544070010D3D6 /* LaunchScreen.storyboard in Resources */,
+				1C0593C61D85484F0010D3D6 /* start.txt in Resources */,
 				1C0593BB1D8544070010D3D6 /* Assets.xcassets in Resources */,
 				1C0593B91D8544060010D3D6 /* Main.storyboard in Resources */,
 			);
