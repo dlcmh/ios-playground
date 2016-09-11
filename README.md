@@ -2,5 +2,10 @@
 
 Create an anagram game while learning about closures and booleans.
 
-[Click for full size](https://raw.githubusercontent.com/dlcmh/ios-playground/hws-04-easy-browser/1.png)
-![UINavigationBar & navigationItem, UIToolbar & toolbarItems, UIProgressView)](1.png "UINavigationBar & navigationItem, UIToolbar & toolbarItems, UIProgressView)")
+
+## Steps
+
+After deleting lots of stuff, a plain Table View project:
+
+[Click for full size](https://raw.githubusercontent.com/dlcmh/ios-playground/hws-05-word-scramble/1.png)
+![Plain Table View project)](1.png "Plain Table View project")
