@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuessTheFlagGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Guess_the_Flag" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,6 +20,9 @@
                         <subviews>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xoy-Gz-rWq">
                                 <rect key="frame" x="200" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xoy-Gz-rWq" secondAttribute="height" multiplier="2:1" id="qKN-TO-pca"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n5G-bW-dkf"/>
@@ -26,6 +30,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSP-2v-WBZ">
                                 <rect key="frame" x="200" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CSP-2v-WBZ" secondAttribute="height" multiplier="2:1" id="EMk-I2-XRX"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q5f-iT-Nqg"/>
@@ -33,6 +40,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hem-YY-eJm">
                                 <rect key="frame" x="200" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hem-YY-eJm" secondAttribute="height" multiplier="2:1" id="Ee8-cC-KYs"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aH2-15-yu2"/>
@@ -42,7 +52,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hem-YY-eJm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="30s-nL-YDR"/>
+                            <constraint firstItem="CSP-2v-WBZ" firstAttribute="height" secondItem="Xoy-Gz-rWq" secondAttribute="height" id="Fpl-oT-kQI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CSP-2v-WBZ" secondAttribute="bottom" constant="20" id="Je0-6K-JGh"/>
                             <constraint firstItem="CSP-2v-WBZ" firstAttribute="centerX" secondItem="Xoy-Gz-rWq" secondAttribute="centerX" id="Mnj-tf-9ie"/>
+                            <constraint firstItem="Xoy-Gz-rWq" firstAttribute="height" secondItem="hem-YY-eJm" secondAttribute="height" id="WvV-ZP-x3N"/>
                             <constraint firstItem="hem-YY-eJm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jSV-qW-I4K"/>
                             <constraint firstItem="Xoy-Gz-rWq" firstAttribute="centerX" secondItem="hem-YY-eJm" secondAttribute="centerX" id="kPp-Us-c0p"/>
                             <constraint firstItem="CSP-2v-WBZ" firstAttribute="top" secondItem="Xoy-Gz-rWq" secondAttribute="bottom" constant="30" id="lz6-aB-xjl"/>
@@ -58,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1152" y="429"/>
+            <point key="canvasLocation" x="1258" y="583"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="74l-iI-K4W">
@@ -76,7 +89,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZhF-iD-Y5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="481" y="1089"/>
+            <point key="canvasLocation" x="465" y="583"/>
         </scene>
     </scenes>
     <resources>

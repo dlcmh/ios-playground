@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1C2624F11D84000F00943313 /* GuessTheFlagGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheFlagGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C2624F11D84000F00943313 /* Guess the Flag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guess the Flag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2624F41D84000F00943313 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C2624F61D84000F00943313 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1C2624F91D84000F00943313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		1C2624F21D84000F00943313 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1C2624F11D84000F00943313 /* GuessTheFlagGame.app */,
+				1C2624F11D84000F00943313 /* Guess the Flag.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,9 +67,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1C2624F01D84000F00943313 /* GuessTheFlagGame */ = {
+		1C2624F01D84000F00943313 /* Guess the Flag */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1C2625031D84000F00943313 /* Build configuration list for PBXNativeTarget "GuessTheFlagGame" */;
+			buildConfigurationList = 1C2625031D84000F00943313 /* Build configuration list for PBXNativeTarget "Guess the Flag" */;
 			buildPhases = (
 				1C2624ED1D84000F00943313 /* Sources */,
 				1C2624EE1D84000F00943313 /* Frameworks */,
@@ -79,9 +79,9 @@
 			);
 			dependencies = (
 			);
-			name = GuessTheFlagGame;
+			name = "Guess the Flag";
 			productName = GuessTheFlagGame;
-			productReference = 1C2624F11D84000F00943313 /* GuessTheFlagGame.app */;
+			productReference = 1C2624F11D84000F00943313 /* Guess the Flag.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -100,7 +100,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1C2624EC1D84000F00943313 /* Build configuration list for PBXProject "GuessTheFlagGame" */;
+			buildConfigurationList = 1C2624EC1D84000F00943313 /* Build configuration list for PBXProject "Guess the Flag" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -113,7 +113,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1C2624F01D84000F00943313 /* GuessTheFlagGame */,
+				1C2624F01D84000F00943313 /* Guess the Flag */,
 			);
 		};
 /* End PBXProject section */
@@ -255,7 +255,7 @@
 				INFOPLIST_FILE = GuessTheFlagGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dakerr.GuessTheFlagGame;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Guess the Flag";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -269,7 +269,7 @@
 				INFOPLIST_FILE = GuessTheFlagGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dakerr.GuessTheFlagGame;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Guess the Flag";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -277,7 +277,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1C2624EC1D84000F00943313 /* Build configuration list for PBXProject "GuessTheFlagGame" */ = {
+		1C2624EC1D84000F00943313 /* Build configuration list for PBXProject "Guess the Flag" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1C2625011D84000F00943313 /* Debug */,
@@ -286,7 +286,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1C2625031D84000F00943313 /* Build configuration list for PBXNativeTarget "GuessTheFlagGame" */ = {
+		1C2625031D84000F00943313 /* Build configuration list for PBXNativeTarget "Guess the Flag" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1C2625041D84000F00943313 /* Debug */,
