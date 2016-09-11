@@ -18,6 +18,9 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Prompt the user for word
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(promptForAnswer))
+        
         // Load the start.txt file
         if let startWordsPath = NSBundle.mainBundle().pathForResource("start", ofType: "txt") {
             if let startWords = try? String(contentsOfFile: startWordsPath, usedEncoding: nil) {
@@ -36,6 +39,30 @@ class MasterViewController: UITableViewController {
         title = allWords[0]
         objects.removeAll(keepCapacity: true)
         tableView.reloadData()
+    }
+    
+    func promptForAnswer() {
+        let ac = UIAlertController(title: "Enter answer", message: nil, preferredStyle: .Alert)
+        ac.addTextFieldWithConfigurationHandler(nil)
+        
+        // [unowned self, ac] declares self (the current view controller) and ac (our UIAlertController) to be captured as unowned references inside the closure. It means the closure can use them, but won't create a strong reference cycle because we've made it clear the closure doesn't own either of them.
+        let submitAction = UIAlertAction(title: "Submit", style: .Default) { [unowned self, ac] (action: UIAlertAction!) in
+            
+            // force unwraps the array of text fields (it's optional because there might not be any; we can force unwrap because we know we added one), then tells Swift to treat it as a UITextField
+            let answer = ac.textFields![0]
+            
+            // This submitAnswer() method is external to the closures current context, so when you're writing it you might not realise that calling submitAnswer() implicitly requires that self be captured by the closure. That is, the closure can't call submitAnswer() if it doesn't capture the view controller.
+            // We've already declared that self is unowned by the closure, but Swift wants us to be absolutely sure we know what we're doing: every call to a method or property of the current view controller must prefixed with "self.", as in self.submitAnswer().
+            // In project 1, I told you there were two trains of thought regarding use of self, and said, "The first group of people never like to use self. unless it's required, because when it's required it's actually important and meaningful, so using it in places where it isn't required can confuse matters."
+            // Implicit capture of self in closures is that place when using self is required and meaningful: Swift won't let you avoid it here. By restricting your use of self to closures, you can easily check your code doesn't have any reference cycles by searching for "self" – there ought not to be too many to look through!
+            self.submitAnswer(answer.text!)
+        }
+        
+        ac.addAction(submitAction)
+        presentViewController(ac, animated: true, completion: nil)
+    }
+    
+    func submitAnswer(answer: String) {
     }
 
     override func didReceiveMemoryWarning() {
