@@ -18,9 +18,6 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Prompt the user for word
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(promptForAnswer))
-        
         // Load the start.txt file
         if let startWordsPath = NSBundle.mainBundle().pathForResource("start", ofType: "txt") {
             if let startWords = try? String(contentsOfFile: startWordsPath, usedEncoding: nil) {
@@ -30,6 +27,12 @@ class MasterViewController: UITableViewController {
                 allWords = ["silkworm"]
             }
         }
+
+        // Prompt the user for word
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(promptForAnswer))
+        
+        // Show another word
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: #selector(startGame))
         
         startGame()
     }
@@ -64,6 +67,9 @@ class MasterViewController: UITableViewController {
     
     func submitAnswer(answer: String) {
         let lowerAnswer = answer.lowercaseString
+        
+        let errorTitle: String
+        let errorMessage: String
 
         // (1) This method needs to check whether the player's word can be made from the given letters.
         if wordIsPossible(lowerAnswer) {
@@ -81,17 +87,31 @@ class MasterViewController: UITableViewController {
                     // (2) Insert a new row in the table view. We could just use the table view's reloadData() method to force a full reload, but that's not very efficient when we're changing just one row. Also, we'll use insertRowsAtIndexPaths instead of reload() in order for animation of the newly-inserted row.
                     let indexPath = NSIndexPath(forRow: 0, inSection: 0)
                     tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                    return
+                } else {
+                    errorTitle = "Word not recognized"
+                    errorMessage = "You can't just make them up, you know!"
                 }
+            } else {
+                errorTitle = "Word used already"
+                errorMessage = "Be more original!"
             }
+        } else {
+            errorTitle = "Word not possible"
+            errorMessage = "You can't spell that word from \(title!.lowercaseString)"
         }
+        
+        let ac = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .Alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        presentViewController(ac, animated: true, completion: nil)
     }
     
     func wordIsPossible(word: String) -> Bool {
-        var tempWord = title?.lowercaseString
+        var tempWord = title!.lowercaseString
         
         for letter in word.characters {
-            if let pos = tempWord?.rangeOfString(String(letter)) {
-                tempWord?.removeAtIndex(pos.startIndex)
+            if let pos = tempWord.rangeOfString(String(letter)) {
+                tempWord.removeAtIndex(pos.startIndex)
             } else {
                 return false
             }
@@ -105,8 +125,14 @@ class MasterViewController: UITableViewController {
     }
     
     func wordIsReal(word: String) -> Bool {
+        let wordLength = word.characters.count
+        
+        if wordLength < 1 {
+            return false
+        }
+
         let checker = UITextChecker()
-        let range = NSMakeRange(0, word.characters.count)
+        let range = NSMakeRange(0, wordLength)
         let misspelledRange = checker.rangeOfMisspelledWordInString(word, range: range, startingAt: 0, wrap: false, language: "en")
         
         if misspelledRange.location == NSNotFound {
