@@ -63,6 +63,39 @@ class MasterViewController: UITableViewController {
     }
     
     func submitAnswer(answer: String) {
+        let lowerAnswer = answer.lowercaseString
+
+        // (1) This method needs to check whether the player's word can be made from the given letters.
+        if wordIsPossible(lowerAnswer) {
+
+            // (2) It needs to check whether the word has been used already, because obviously we don't want duplicate words.
+            if wordIsOriginal(lowerAnswer) {
+
+                // (3) It also needs to check whether the word is actually a valid English word, because otherwise the user can just type in nonsense.
+                if wordIsReal(lowerAnswer) {
+        
+                    // If checks pass:
+                    // (1) Add the word to the objects array, then
+                    objects.insert(lowerAnswer, atIndex: 0)
+
+                    // (2) Insert a new row in the table view. We could just use the table view's reloadData() method to force a full reload, but that's not very efficient when we're changing just one row. Also, we'll use insertRowsAtIndexPaths instead of reload() in order for animation of the newly-inserted row.
+                    let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+                    tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                }
+            }
+        }
+    }
+    
+    func wordIsPossible(word: String) -> Bool {
+        return true
+    }
+    
+    func wordIsOriginal(word: String) -> Bool {
+        return true
+    }
+    
+    func wordIsReal(word: String) -> Bool {
+        return true
     }
 
     override func didReceiveMemoryWarning() {
