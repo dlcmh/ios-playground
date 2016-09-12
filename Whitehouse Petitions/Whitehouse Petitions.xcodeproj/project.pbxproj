@@ -13,6 +13,7 @@
 		1C47B5301D8764C900CDB891 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C47B52E1D8764C900CDB891 /* Main.storyboard */; };
 		1C47B5321D8764C900CDB891 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C47B5311D8764C900CDB891 /* Assets.xcassets */; };
 		1C47B5351D8764C900CDB891 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C47B5331D8764C900CDB891 /* LaunchScreen.storyboard */; };
+		1C47B53D1D8767BF00CDB891 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C47B53C1D8767BF00CDB891 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1C47B5311D8764C900CDB891 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C47B5341D8764C900CDB891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C47B5361D8764C900CDB891 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C47B53C1D8767BF00CDB891 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		1C47B5271D8764C900CDB891 /* Whitehouse Petitions */ = {
 			isa = PBXGroup;
 			children = (
+				1C47B53C1D8767BF00CDB891 /* SwiftyJSON.swift */,
 				1C47B5281D8764C900CDB891 /* AppDelegate.swift */,
 				1C47B52A1D8764C900CDB891 /* MasterViewController.swift */,
 				1C47B52C1D8764C900CDB891 /* DetailViewController.swift */,
@@ -141,6 +144,7 @@
 				1C47B52D1D8764C900CDB891 /* DetailViewController.swift in Sources */,
 				1C47B52B1D8764C900CDB891 /* MasterViewController.swift in Sources */,
 				1C47B5291D8764C900CDB891 /* AppDelegate.swift in Sources */,
+				1C47B53D1D8767BF00CDB891 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
