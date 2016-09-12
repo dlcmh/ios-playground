@@ -20,6 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
         splitViewController.delegate = self
+        
+        // Code for dynamically creating a second MasterViewController
+        let tabBarController = splitViewController.viewControllers[0] as! UITabBarController
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil) // nil means "use the current app bundle."
+        let vc = storyboard.instantiateViewControllerWithIdentifier("NavController") as! UINavigationController
+        vc.tabBarItem = UITabBarItem(tabBarSystemItem: .TopRated, tag: 1)
+        
+        tabBarController.viewControllers?.append(vc)
+        // End: Code for dynamically creating a second MasterViewController
+        
         return true
     }
 

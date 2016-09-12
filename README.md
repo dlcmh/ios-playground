@@ -53,4 +53,18 @@ class DetailViewController: UIViewController {
 ```
 
 [Click for full size](https://raw.githubusercontent.com/dlcmh/ios-playground/hws-07-whitehouse-petitions/2.png)<br>
-!["Render detail in a web view"](2.png ""Render detail in a web view"")
+![Render detail in a web view](2.png "Render detail in a web view")
+
+
+Write code inside the `didFinishLaunching` method of `AppDelegate.swift` for dynamically inserting a second `MasterViewController` into the `UITabBar`.
+
+> If you add more view controllers to the tab bar, you'll find you can add up to five before you start seeing a "More" button. This More tab hides all the view controllers that don't fit into the tab bar, and it's handled for you automatically by iOS.
+
+[Click for full size](https://raw.githubusercontent.com/dlcmh/ios-playground/hws-07-whitehouse-petitions/3.png)<br>
+![Second MasterViewController](3.png "Second MasterViewController")
+
+
+Display aloading error message inside a `UIAlertController` with a `UIAlertAction` button to dismiss the alert.
+
+[Click for full size](https://raw.githubusercontent.com/dlcmh/ios-playground/hws-07-whitehouse-petitions/4.png)<br>
+![UIAlertController error message and UIAlertAction for the OK button](4.png "UIAlertController error message and UIAlertAction for the OK button")
