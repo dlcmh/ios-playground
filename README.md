@@ -23,7 +23,7 @@ override func prefersStatusBarHidden() -> Bool {
 > If you run the app now, you'll see seem some colorful labels at the top, overlapping so it looks like it says "LABELS ME". That's because our labels are placed in their default position (at the top-left of the screen) and are all sized to fit their content.
 
 [Click for full size](https://raw.githubusercontent.com/dlcmh/ios-playground/hws-06b-auto-layout/1.png)<br>
-![Overlapping labels from top-left corner by default)](1.png "Overlapping labels from top-left corner by default")
+![Overlapping labels from top-left corner by default](1.png "Overlapping labels from top-left corner by default")
 
 
 Horizontal VFL:
@@ -37,7 +37,7 @@ for label in viewsDictionary.keys {
 ```
 
 [Click for full size](https://raw.githubusercontent.com/dlcmh/ios-playground/hws-06b-auto-layout/2.png)<br>
-![With Horizontal VFL)](2.png "With Horizontal VFL")
+![With Horizontal VFL](2.png "With Horizontal VFL")
 
 Vertical VFL:
 
@@ -47,3 +47,16 @@ view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[label1]-
 
 [Click for full size](https://raw.githubusercontent.com/dlcmh/ios-playground/hws-06b-auto-layout/3.png)<br>
 ![With Vertical VFL)](3.png "With Vertical VFL")
+
+
+Replace vertical VFL with one that adds a constraint for the bottom edge saying that the bottom of last label must >= 10 points away from the bottom of the view controller's view. The height of each label should also be able to be set by assigning a dictionary to the `metrics` option. We're also going to add priorities for Auto Layout to be able to decide which constraints to to apply if all constraints cannot be simultaneously satisfied (constraints are evaluated from highest priority to lowest, but all will be taken into account - so set `label1` to priority 999 and have the other labels adopt height of `label1`):
+
+```swift
+view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[label1(labelHeight@999)]-[label2(label1)]-[label3(label1)]-[label4(label1)]-[label5(label1)]->=10-|", options: [], metrics: ["labelHeight": 88], views: viewsDictionary))
+```
+
+[Click for full size](https://raw.githubusercontent.com/dlcmh/ios-playground/hws-06b-auto-layout/4.png)<br>
+![Portrait](4.png "Portrait")
+
+[Click for full size](https://raw.githubusercontent.com/dlcmh/ios-playground/hws-06b-auto-layout/5.png)<br>
+![Landscape](5.png "Landscape")
