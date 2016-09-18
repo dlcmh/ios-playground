@@ -12,6 +12,7 @@
 		1C6EAF381D8E302A001CD070 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C6EAF361D8E302A001CD070 /* Main.storyboard */; };
 		1C6EAF3A1D8E302A001CD070 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C6EAF391D8E302A001CD070 /* Assets.xcassets */; };
 		1C6EAF3D1D8E302A001CD070 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C6EAF3B1D8E302A001CD070 /* LaunchScreen.storyboard */; };
+		1CB5C6951D8E6D3D002A8C0A /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1CB5C6941D8E6D3D002A8C0A /* level1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1C6EAF391D8E302A001CD070 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C6EAF3C1D8E302A001CD070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C6EAF3E1D8E302B001CD070 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CB5C6941D8E6D3D002A8C0A /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		1C6EAF311D8E302A001CD070 /* Swifty Words */ = {
 			isa = PBXGroup;
 			children = (
+				1CB5C6941D8E6D3D002A8C0A /* level1.txt */,
 				1C6EAF321D8E302A001CD070 /* AppDelegate.swift */,
 				1C6EAF341D8E302A001CD070 /* ViewController.swift */,
 				1C6EAF361D8E302A001CD070 /* Main.storyboard */,
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C6EAF3D1D8E302A001CD070 /* LaunchScreen.storyboard in Resources */,
+				1CB5C6951D8E6D3D002A8C0A /* level1.txt in Resources */,
 				1C6EAF3A1D8E302A001CD070 /* Assets.xcassets in Resources */,
 				1C6EAF381D8E302A001CD070 /* Main.storyboard in Resources */,
 			);
@@ -304,6 +308,7 @@
 				1C6EAF431D8E302B001CD070 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

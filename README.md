@@ -1,4 +1,4 @@
-# Project 8: 7 Swifty Words
+# [Project 8: 7 Swifty Words](https://www.hackingwithswift.com/read/8)
 
 Build a word-guessing game and master strings once and for all.
 
