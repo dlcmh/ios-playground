@@ -17,6 +17,10 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        performSelector(inBackground: #selector(fetchJSON), with: nil)
+    }
+    
+    func fetchJSON() {
         let urlString: String
         if navigationController?.tabBarItem.tag == 0 {
             urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
@@ -24,23 +28,19 @@ class MasterViewController: UITableViewController {
             urlString = "https://api.whitehouse.gov/v1/petitions.json?signatureCountFloor=10_000&limit=100"
         }
         
-        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
-            if let url = URL(string: urlString) {
-                if let data = try? Data(contentsOf: url, options: []) {
-                    let json = JSON(data: data)
-                    
-                    if json["metadata"]["responseInfo"]["status"].intValue == 200 {
-                        self.parseJSON(json)
-                    } else {
-                        self.showError()
-                    }
-                } else {
-                    self.showError()
+        if let url = URL(string: urlString) {
+            if let data = try? Data(contentsOf: url, options: []) {
+                let json = JSON(data: data)
+                
+                if json["metadata"]["responseInfo"]["status"].intValue == 200 {
+                    self.parseJSON(json)
+                    return
                 }
-            } else {
-                self.showError()
             }
         }
+        
+        performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
+        
     }
     
     func parseJSON(_ json: JSON) {
@@ -52,17 +52,13 @@ class MasterViewController: UITableViewController {
             objects.append(obj)
         }
         
-        DispatchQueue.main.async { [unowned self] in
-            self.tableView.reloadData()
-        }
+        tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
     }
     
     func showError() {
-        DispatchQueue.main.async { [unowned self] in
-            let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(ac, animated: true, completion: nil)
-        }
+        let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(ac, animated: true, completion: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
