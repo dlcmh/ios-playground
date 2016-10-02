@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
     
     func use_me() {
-        print("starting...")
+        dataTry = "Loading..."
         
         let url:URL = URL(string: url_to_request)!
         print("\(url)")
@@ -44,8 +44,7 @@ class ViewController: UIViewController {
         print("\(request)")
         
         let task = session.dataTask(with: request as URLRequest, completionHandler: {
-            (
-            data, response, error) in
+            (data, response, error) in
             
             guard let _:Data = data, let _:URLResponse = response  , error == nil else {
                 print("error")
@@ -53,7 +52,6 @@ class ViewController: UIViewController {
             }
             
             DispatchQueue.main.async {
-//                self.friendLabel.text = "You are following \(friendCount) accounts"
                 self.dataTry = String(data: data!, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
             }
         })
