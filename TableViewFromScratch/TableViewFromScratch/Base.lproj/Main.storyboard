@@ -23,6 +23,9 @@
                                     <segment title="Ascending"/>
                                     <segment title="Descending"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControlForAscendingDescending:" destination="BYZ-38-t0r" eventType="valueChanged" id="OSu-bT-H2T"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N1y-dx-JDy">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

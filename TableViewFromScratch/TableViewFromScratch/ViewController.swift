@@ -10,11 +10,34 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let dataArray = ["1", "2", "3"].sorted {$0 > $1}
+    let dataArray = ["1", "2", "3"]
+    var selectedSortOrder = "Ascending"
+    var sortedDataArray = [String]()
+    
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setDataSource(order: selectedSortOrder)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func segmentedControlForAscendingDescending(_ sender: AnyObject) {
+        selectedSortOrder = sender.titleForSegment(at: sender.selectedSegmentIndex)!
+        setDataSource(order: selectedSortOrder)
+    }
+    
+    func setDataSource(order: String) {
+        if order == "Descending" {
+            sortedDataArray = dataArray.sorted {$0 > $1}
+        } else {
+            sortedDataArray = dataArray.sorted()
+        }
+        
+        tableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -22,22 +45,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArray.count
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        return sortedDataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
 
-        let content = dataArray[indexPath.row]
+        let content = sortedDataArray[indexPath.row]
         cell.textLabel?.text = content
 
         return cell
     }
-
-
 }
 
