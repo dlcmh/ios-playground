@@ -19,7 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cq6-bS-S2Z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5R-wF-GMt">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Es-5f-9m3">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -27,14 +32,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="Cq6-bS-S2Z" secondAttribute="leading" id="2n9-SP-YB4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Cq6-bS-S2Z" secondAttribute="trailing" id="vHv-tt-dPt"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Cq6-bS-S2Z" secondAttribute="bottom" constant="323" id="wFz-0o-a1G"/>
-                            <constraint firstItem="Cq6-bS-S2Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="303" id="wYV-dT-Rsr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3Es-5f-9m3" secondAttribute="leading" id="A2I-QV-w1f"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="I5R-wF-GMt" secondAttribute="leading" id="YiL-Us-bFa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Es-5f-9m3" secondAttribute="trailing" id="aqZ-dJ-bo2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I5R-wF-GMt" secondAttribute="trailing" id="d40-V0-RLb"/>
+                            <constraint firstItem="3Es-5f-9m3" firstAttribute="top" secondItem="I5R-wF-GMt" secondAttribute="bottom" constant="8" id="ksO-hx-vp6"/>
+                            <constraint firstItem="I5R-wF-GMt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="288" id="snr-Rr-U9c"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dataLabel" destination="Cq6-bS-S2Z" id="lgl-FD-atC"/>
+                        <outlet property="dataLabel1" destination="I5R-wF-GMt" id="4pf-cc-ANS"/>
+                        <outlet property="dataLabel2" destination="3Es-5f-9m3" id="DLB-2I-efV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
